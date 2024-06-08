@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="site_icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d6bf98fc9f.js" crossorigin="anonymous"></script>
+    <title>Conferens</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><span>Наукові</span>Конференції</a>
+
+        <input type="checkbox" name="menu" id="menu">
+        <label for="menu"><i class="fas fa-bars"></i></label>
+        <nav class="navbar">
+            <a href="#">Про сайт</a>
+            <a href="https://nupp.edu.ua/news.html">Новини</a>
+            <a href="rgr2\location.htm">Контакти</a>
+            <a href="https://www.mcnd.org.ua/">Конференції</a>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="item">
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <div class="item_col">
+                <h2>«Актуальні питання розвитку галузей науки»</h2>
+                <h3>Дата проведення : 14 червня 2024 у місті Суми, Україна.
+                    <p>До участі запрошуються науковці, викладачі, аспіранти, а також студенти з науковими керівниками.
+                        До
+                        публікації приймаються як тези (2-5 сторінок), так і статті (6-12 сторінок, з анотацією).Перелік
+                        секцій, вимоги до оформлення матеріалів, а також інформацію про розмір оргвнеску та реквізитами
+                        монжо ознайомитись натиснувши кнопку нижче.</p>
+                </h3>
+                <button class="btn">
+                    <a href="https://www.mcnd.org.ua/documents/14_06_2024_ua.pdf">Інформаційний лист</a></button>
+            </div>
+            <img src="img\6.jpg" alt="">
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+
+        <div class="item">
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <div class="item_col">
+                <h2>«Здобутки та досягнення прикладних та фундаментальних наук XXI століття»</h2>
+                <h3>Дата проведення : 21 червня 2024 у місті Полтава, Українаю
+                    <p>Організатор: ГО «Міжнародний центр наукових досліджень». Тези та статті учасників будуть
+                        опубліковані в збірнику наукових праць, якому буде присвоєно: УДК 082:001; унікальне DOI;
+                        авторський знак; ISBN, надане видавцю Книжковою палатою України. Перелік
+                        секцій, вимоги до оформлення матеріалів, а також інформацію про розмір оргвнеску та реквізитами
+                        монжо ознайомитись натиснувши кнопку нижче.</p>
+                </h3>
+                <button class="btn">
+                    <a href="https://www.mcnd.org.ua/documents/21_06_2024_ua.pdf">Інформаційний лист</a></button>
+            </div>
+            <img src="img\5.jpg" alt="">
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+
+        <div class="item">
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <div class="item_col">
+                <h2>«АКТУАЛЬНІ ПРОБЛЕМИ ТА ПЕРСПЕКТИВИ РОЗВИТКУ ФУНДАМЕНТАЛЬНИХ, ПРИКЛАДНИХ, ЗАГАЛЬНОТЕХНІЧНИХ ТА
+                    БЕЗПЕКОВИХ НАУК»</h2>
+                <h3>Дата проведення : 27 червня 2024 року в м. Київ, Україна. Запрошуємо Вас долучитися до учасників Всеукраїнської науково-практичної конференції пам’яті
+                    академіка Академії наук вищої освіти, професора Анатолія Володимировича Касперського.</h3>
+                <button class="btn">
+                    <a href="https://kztdop.ipf.npu.edu.ua/images/Science/KAV_Conferenc/2024/List-info2.pdf">Інформаційний лист</a>
+                </button>
+            </div>
+            <img src="img\4.jpg" alt="">
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+
+        <div class="arrow_mobile">
+            <a class="previous_mobile" onclick="previousSlide()">&#10094;</a>
+            <a class="next_mobile" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function nextSlide() {
+                showSlides(slideIndex += 1);
+            }
+
+            function previousSlide() {
+                showSlides(slideIndex -= 1);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+
+            function showSlides(n) {
+
+                let slides = document.getElementsByClassName("item");
+
+
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+
+
+                for (let slide of slides) {
+                    slide.style.display = "none";
+                }
+
+                slides[slideIndex - 1].style.display = "flex";
+            }
+        </script>
+
+</body>
+
+</html>
